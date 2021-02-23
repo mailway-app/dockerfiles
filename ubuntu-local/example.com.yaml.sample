@@ -1,0 +1,15 @@
+rules:
+
+  - match:
+      - type: literal
+        field: from
+        value: spam@test.com
+    action:
+      - type: drop
+
+  - match:
+      - type: all
+    action:
+      - type: forward
+        value:
+            - sven@example.net
